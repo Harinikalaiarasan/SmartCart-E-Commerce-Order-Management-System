@@ -1,0 +1,425 @@
+ /* ========================================================
+   MyOrders.css
+   Professional Responsive My Orders Page
+   ======================================================== */
+
+.my-orders {
+  width: 94%;
+  max-width: 1200px;
+  margin: 40px auto 70px;
+  font-family: var(--font-family, Arial, sans-serif);
+}
+
+/* ================= PAGE HEADER ================= */
+
+.my-orders > h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 28px;
+  letter-spacing: -0.5px;
+}
+
+/* ================= MESSAGE ================= */
+
+.my-orders > p {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================= LOADING / LOGIN / EMPTY ================= */
+
+.my-orders > h2 {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 35px 25px;
+  text-align: center;
+  color: #475569;
+  font-size: 19px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+/* ================= ORDER CARD ================= */
+
+.order-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px 26px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= ORDER TITLE ================= */
+
+.order-card h2 {
+  margin: 0 0 18px;
+
+  font-size: 21px;
+  font-weight: 800;
+  color: #111827;
+
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+/* ================= ORDER DETAILS ================= */
+
+.order-card p {
+  margin: 11px 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+.order-card strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+/* ================= ORDER TRACKING ================= */
+
+.order-tracking {
+  margin: 24px 0 22px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.order-tracking h3 {
+  margin: 0 0 22px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* ================= TRACKING CONTAINER ================= */
+
+.tracking-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* ================= TRACKING STEP ================= */
+
+.tracking-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* ================= TRACKING CIRCLE ================= */
+
+.tracking-circle {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e2e8f0;
+  color: #64748b;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  border: 2px solid #cbd5e1;
+}
+
+/* ================= COMPLETED STEP ================= */
+
+.tracking-step.completed .tracking-circle {
+  background: #16a34a;
+  color: #ffffff;
+  border-color: #16a34a;
+}
+
+.tracking-step span {
+  margin-top: 9px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #64748b;
+}
+
+.tracking-step.completed span {
+  color: #15803d;
+}
+
+/* ================= TRACKING LINE ================= */
+
+.tracking-line {
+  flex: 1;
+  height: 3px;
+
+  background: #e2e8f0;
+
+  margin: 0 5px;
+  margin-bottom: 25px;
+
+  border-radius: 5px;
+}
+
+.tracking-line.active {
+  background: #16a34a;
+}
+
+/* ================= CANCELLED TRACKING ================= */
+
+.cancelled-tracking {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.tracking-step.cancelled .tracking-circle {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+}
+
+.tracking-step.cancelled span {
+  color: #dc2626;
+}
+
+/* ================= CURRENT STATUS ================= */
+
+.current-status {
+  margin-top: 15px !important;
+}
+
+.current-status strong {
+  display: inline-block;
+
+  padding: 5px 11px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ================= STATUS COLORS ================= */
+
+.status-placed {
+  background: #fef3c7;
+  color: #b45309 !important;
+}
+
+.status-shipped {
+  background: #dbeafe;
+  color: #1d4ed8 !important;
+}
+
+.status-delivered {
+  background: #dcfce7;
+  color: #15803d !important;
+}
+
+.status-cancelled {
+  background: #fee2e2;
+  color: #b91c1c !important;
+}
+
+/* ================= PAYMENT METHOD ================= */
+
+.order-card p:nth-of-type(3) strong {
+  color: #2563eb;
+}
+
+/* ================= VIEW ORDER BUTTON ================= */
+
+.order-card button {
+  margin-top: 18px;
+
+  width: 100%;
+  min-height: 44px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #111827;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.order-card button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.order-card button:active {
+  transform: translateY(0);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+  .my-orders {
+    width: 92%;
+    margin: 30px auto 50px;
+  }
+
+  .my-orders > h1 {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+
+  .order-card {
+    padding: 21px;
+  }
+
+  .order-card h2 {
+    font-size: 19px;
+  }
+
+  .tracking-step {
+    min-width: 80px;
+  }
+
+  .tracking-step span {
+    font-size: 12px;
+  }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .my-orders {
+    width: 94%;
+    margin: 24px auto 40px;
+  }
+
+  .my-orders > h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .order-card {
+    padding: 18px;
+    border-radius: 13px;
+    margin-bottom: 16px;
+  }
+
+  .order-card h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .order-card p {
+    font-size: 14px;
+    margin: 9px 0;
+  }
+
+  /* Tracking mobile */
+
+  .order-tracking {
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  .tracking-container {
+    width: 100%;
+  }
+
+  .tracking-step {
+    min-width: 65px;
+  }
+
+  .tracking-circle {
+    width: 32px;
+    height: 32px;
+
+    font-size: 12px;
+  }
+
+  .tracking-step span {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .tracking-line {
+    margin-bottom: 22px;
+    height: 2px;
+  }
+
+  .order-card button {
+    margin-top: 15px;
+    min-height: 46px;
+    font-size: 14px;
+  }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .my-orders > h1 {
+    font-size: 23px;
+  }
+
+  .order-card {
+    padding: 16px;
+  }
+
+  .order-card h2 {
+    font-size: 17px;
+  }
+
+  .order-card p {
+    font-size: 13px;
+  }
+
+  .tracking-step {
+    min-width: 55px;
+  }
+
+  .tracking-circle {
+    width: 29px;
+    height: 29px;
+  }
+
+  .tracking-step span {
+    font-size: 10px;
+  }
+
+}

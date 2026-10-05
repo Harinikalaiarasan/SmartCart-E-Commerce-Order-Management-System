@@ -1,0 +1,964 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR - DESKTOP
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+
+  padding: 0 4%;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 2px 12px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  color: #111827;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+
+/* =========================
+   MOBILE MENU WRAPPER
+   DESKTOP VERSION
+========================= */
+
+.mobile-nav {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+
+  gap: 28px;
+
+  min-width: 0;
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.nav-item {
+  border: none;
+
+  background: transparent;
+
+  color: #4b5563;
+
+  padding: 9px 13px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background: #f3f4f6;
+
+  color: #111827;
+}
+
+.nav-item.active {
+  background: #111827;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   NAV RIGHT
+========================= */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  white-space: nowrap;
+
+  flex-shrink: 0;
+}
+
+.welcome-user {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+
+/* =========================
+   AUTH BUTTONS
+========================= */
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.login-btn {
+  border: 1px solid #111827;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  padding: 9px 17px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #f3f4f6;
+}
+
+.register-btn {
+  border: none;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  padding: 10px 17px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.register-btn:hover {
+  background: #374151;
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout-btn {
+  border: none;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  padding: 9px 17px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #374151;
+}
+
+
+/* =========================
+   MOBILE MENU BUTTON
+   HIDDEN ON DESKTOP
+========================= */
+
+.mobile-menu-btn {
+  display: none;
+
+  border: none;
+
+  background: transparent;
+
+  color: #111827;
+
+  font-size: 27px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   PAGE CONTENT
+========================= */
+
+.page-content {
+  width: 100%;
+
+  min-height: calc(100vh - 72px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+  width: 94%;
+
+  min-height: 430px;
+
+  margin: 28px auto 10px;
+
+  padding: 70px 30px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef2f7 0%,
+      #ffffff 50%,
+      #f1f5f9 100%
+    );
+
+  border: 1px solid #e2e8f0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================
+   HERO DECORATION
+========================= */
+
+.hero-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  top: -140px;
+  left: -100px;
+}
+
+.hero-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background: rgba(226, 232, 240, 0.4);
+
+  bottom: -220px;
+  right: -120px;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  max-width: 850px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  padding: 8px 15px;
+
+  border-radius: 50px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.hero-content h1 {
+  color: #111827;
+
+  font-size: 52px;
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  max-width: 650px;
+
+  margin: 0 auto 30px;
+
+  color: #64748b;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   SHOP BUTTON
+========================= */
+
+.shop-btn {
+  border: none;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  padding: 14px 30px;
+
+  border-radius: 9px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  transition: all 0.2s ease;
+}
+
+.shop-btn:hover {
+  background: #374151;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+
+.products-section {
+  width: 100%;
+
+  padding: 30px 3% 60px;
+}
+
+
+/* =========================
+   LAPTOP / TABLET
+========================= */
+
+@media (max-width: 1150px) {
+
+  .navbar {
+    padding: 0 2.5%;
+
+    gap: 15px;
+  }
+
+  .mobile-nav {
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-item {
+    padding: 8px 8px;
+
+    font-size: 13px;
+  }
+
+  .nav-right {
+    gap: 7px;
+  }
+
+  .welcome-user {
+    font-size: 13px;
+  }
+
+  .login-btn,
+  .register-btn,
+  .logout-btn {
+    padding: 8px 12px;
+
+    font-size: 13px;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* =====================
+     MOBILE NAVBAR
+  ===================== */
+
+  .navbar {
+    width: 100%;
+
+    height: 64px;
+
+    min-height: 64px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: sticky;
+
+    top: 0;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    z-index: 1000;
+  }
+
+
+  /* =====================
+     CENTER LOGO
+  ===================== */
+
+  .logo {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    margin: 0;
+
+    padding: 0;
+
+    width: auto;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    color: #111827;
+
+    white-space: nowrap;
+
+    z-index: 1001;
+  }
+
+  .logo-icon {
+    font-size: 21px;
+
+    line-height: 1;
+  }
+
+
+  /* =====================
+     HAMBURGER
+  ===================== */
+
+  .mobile-menu-btn {
+    display: flex;
+
+    position: absolute;
+
+    right: 16px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 42px;
+
+    height: 42px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #111827;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 1002;
+  }
+
+  .mobile-menu-btn:hover {
+    background: #f3f4f6;
+  }
+
+
+  /* =====================
+     MOBILE NAV MENU
+  ===================== */
+
+  .mobile-nav {
+    display: none;
+
+    position: absolute;
+
+    top: 64px;
+
+    left: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 12px 16px 16px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e5e7eb;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.10);
+
+    z-index: 999;
+  }
+
+  .mobile-nav.open {
+    display: flex;
+  }
+
+
+  /* =====================
+     MOBILE NAV LINKS
+  ===================== */
+
+  .nav-links {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    gap: 4px;
+
+    flex: none;
+  }
+
+  .nav-item {
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 11px 14px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #111827;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    white-space: normal;
+
+    cursor: pointer;
+  }
+
+  .nav-item:hover {
+    background: #f3f4f6;
+  }
+
+  .nav-item.active {
+    background: #eef2ff;
+
+    color: #111827;
+  }
+
+
+  /* =====================
+     MOBILE RIGHT SIDE
+  ===================== */
+
+  .nav-right {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    margin-top: 10px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .welcome-user {
+    width: 100%;
+
+    padding: 6px 0;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+  }
+
+
+  /* =====================
+     MOBILE AUTH
+  ===================== */
+
+  .auth-buttons {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .login-btn,
+  .register-btn,
+  .logout-btn {
+    width: 100%;
+
+    min-height: 42px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =====================
+     MOBILE HERO
+  ===================== */
+
+  .hero-section {
+    width: 94%;
+
+    min-height: 380px;
+
+    padding: 50px 20px;
+
+    margin-top: 20px;
+
+    border-radius: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .navbar {
+    height: 64px;
+
+    min-height: 64px;
+
+    padding: 0 14px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .logo-icon {
+    font-size: 20px;
+  }
+
+  .mobile-menu-btn {
+    right: 12px;
+
+    width: 40px;
+
+    height: 40px;
+
+    font-size: 26px;
+  }
+
+  .mobile-nav {
+    top: 64px;
+
+    padding: 10px 14px 14px;
+  }
+
+  .hero-section {
+    width: 94%;
+
+    min-height: 350px;
+
+    padding: 40px 15px;
+
+    border-radius: 18px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+
+    padding: 7px 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 29px;
+
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+
+    line-height: 1.5;
+  }
+
+  .shop-btn {
+    padding: 12px 24px;
+
+    font-size: 14px;
+  }
+
+  .products-section {
+    padding: 20px 3% 40px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .mobile-menu-btn {
+    right: 8px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+
+    padding: 10px 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+}

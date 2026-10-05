@@ -1,0 +1,24 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Frontend
+smartcart-frontend/node_modules/
+smartcart-frontend/dist/
+
+# Backend
+smartcart-backend/target/
+
+# Environment / secrets
+.env
+*.env
+
+# OS
+Thumbs.db
+.DS_Store
+
+# ZIP backup
+smartcart-frontend.zip
+
+# Backend secrets
+smartcart-backend/src/main/resources/application.properties
