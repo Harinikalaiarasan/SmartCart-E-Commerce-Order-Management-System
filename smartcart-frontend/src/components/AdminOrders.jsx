@@ -38,7 +38,7 @@ function AdminOrders() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:8080/api/orders",
+                "https://smartcart-backend-lm1p.onrender.com/api/orders",
                 {
                     method: "GET",
                     headers: {
@@ -71,7 +71,7 @@ function AdminOrders() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:8080/api/orders/${orderId}/status?status=${newStatus}`,
+                `https://smartcart-backend-lm1p.onrender.com/api/orders/${orderId}/status?status=${newStatus}`,
                 {
                     method: "PUT",
                     headers: {
