@@ -25,7 +25,7 @@ function ProductList({ onAddToCart }) {
     const fetchProducts = async () => {
         try {
             const response = await fetch(
-                "https://smartcart-backend-lm1p.onrender.com/api/products"
+                "http://localhost:8080/api/products"
             );
 
             if (!response.ok) {

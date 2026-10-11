@@ -173,47 +173,33 @@
 /* ================= PASSWORD FIELD ================= */
 
 .password-wrapper {
-  position: relative;
-  width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .password-wrapper input {
-  padding-right: 48px;
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
 }
 
-/* ================= SHOW / HIDE PASSWORD ================= */
-
 .password-toggle {
-  position: absolute;
-
-  right: 10px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  width: 34px !important;
-  height: 34px;
-
-  margin: 0 !important;
-  padding: 0 !important;
-
-  border: none !important;
-  background: transparent !important;
-
-  color: #64748b;
-
-  font-size: 17px !important;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-
-  transition: opacity 0.2s ease;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
 }
 
 .password-toggle:hover {
-  opacity: 0.75;
-  transform: translateY(-50%);
+    color: #2563eb;
 }

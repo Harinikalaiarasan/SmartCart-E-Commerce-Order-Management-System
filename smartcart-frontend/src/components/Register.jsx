@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import {
     registerUser,
     sendOtp
@@ -6,7 +7,6 @@ import {
 import "./Register.css";
 
 function Register({ onLogin, onOTP }) {
-
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -14,15 +14,12 @@ function Register({ onLogin, onOTP }) {
     const [address, setAddress] = useState("");
 
     const [showPassword, setShowPassword] = useState(false);
-
     const [message, setMessage] = useState("");
 
     const handleRegister = async (e) => {
-
         e.preventDefault();
 
         try {
-
             setMessage("Creating account...");
 
             const response = await registerUser({
@@ -33,25 +30,16 @@ function Register({ onLogin, onOTP }) {
                 address: address.trim()
             });
 
-            console.log(
-                "Register Response:",
-                response.data
-            );
+            console.log("Register Response:", response.data);
 
             await sendOtp(email.trim());
 
-            setMessage(
-                "Registration successful! OTP sent 📧"
-            );
+            setMessage("Registration successful! OTP sent 📧");
 
             onOTP(email.trim());
 
         } catch (error) {
-
-            console.error(
-                "Register Error:",
-                error
-            );
+            console.error("Register Error:", error);
 
             setMessage(
                 error.response?.data?.error ||
@@ -65,77 +53,48 @@ function Register({ onLogin, onOTP }) {
     };
 
     return (
-
         <div className="register-page">
-
             <div className="register-card">
 
-                <h1>
-                    Create Account 👤
-                </h1>
+                <h1>Create Account 👤</h1>
 
                 <form onSubmit={handleRegister}>
 
-                    <label>
-                        Name
-                    </label>
-
+                    <label>Name</label>
                     <input
                         type="text"
                         value={name}
-                        onChange={(e) =>
-                            setName(e.target.value)
-                        }
+                        onChange={(e) => setName(e.target.value)}
                         placeholder="Enter your name"
                         required
                     />
 
-                    <label>
-                        Email
-                    </label>
-
+                    <label>Email</label>
                     <input
                         type="email"
                         value={email}
-                        onChange={(e) =>
-                            setEmail(e.target.value)
-                        }
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter email"
                         required
                     />
 
-                    <label>
-                        Phone
-                    </label>
-
+                    <label>Phone</label>
                     <input
                         type="tel"
                         value={phone}
-                        onChange={(e) =>
-                            setPhone(e.target.value)
-                        }
+                        onChange={(e) => setPhone(e.target.value)}
                         placeholder="Enter phone number"
                         required
                     />
 
-                    <label>
-                        Password
-                    </label>
+                    <label>Password</label>
 
-                    {/* PASSWORD FIELD */}
-
+                    {/* PASSWORD FIELD WITH EYE ICON */}
                     <div className="password-wrapper">
-
                         <input
-                            type={
-                                showPassword
-                                    ? "text"
-                                    : "password"
-                            }
+                            type={showPassword ? "text" : "password"}
                             value={password}
-                            onChange={(e) =>
-                                setPassword(e.target.value)
-                            }
+                            onChange={(e) => setPassword(e.target.value)}
                             placeholder="Enter password"
                             required
                         />
@@ -143,30 +102,23 @@ function Register({ onLogin, onOTP }) {
                         <button
                             type="button"
                             className="password-toggle"
-                            onClick={() =>
-                                setShowPassword(!showPassword)
-                            }
+                            onClick={() => setShowPassword(!showPassword)}
                             aria-label={
-                                showPassword
-                                    ? "Hide password"
-                                    : "Show password"
+                                showPassword ? "Hide password" : "Show password"
                             }
                         >
-                            {showPassword ? "🙈" : "👁️"}
+                            {showPassword
+                                ? <EyeOff size={20} />
+                                : <Eye size={20} />
+                            }
                         </button>
-
                     </div>
 
-                    <label>
-                        Address
-                    </label>
-
+                    <label>Address</label>
                     <input
                         type="text"
                         value={address}
-                        onChange={(e) =>
-                            setAddress(e.target.value)
-                        }
+                        onChange={(e) => setAddress(e.target.value)}
                         placeholder="Enter delivery address"
                         required
                     />
@@ -177,26 +129,19 @@ function Register({ onLogin, onOTP }) {
 
                 </form>
 
-                {message && (
-                    <p>
-                        {message}
-                    </p>
-                )}
+                {message && <p>{message}</p>}
 
                 <p>
                     Already have an account?{" "}
-
                     <button
                         type="button"
                         onClick={onLogin}
                     >
                         Login
                     </button>
-
                 </p>
 
             </div>
-
         </div>
     );
 }
