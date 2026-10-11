@@ -1,14 +1,14 @@
-FROM eclipse-temurin:17-jdk
+
+FROM maven:3.9.9-eclipse-temurin-17
 
 WORKDIR /app
 
+COPY pom.xml .
+RUN mvn -B dependency:go-offline
+
 COPY . .
 
-RUN chmod +x mvnw
-
-RUN ./mvnw clean package -DskipTests
-
-RUN echo "===== APPLICATION PROPERTIES INSIDE DOCKER BUILD =====" && cat target/classes/application.properties
+RUN mvn -B clean package -DskipTests
 
 EXPOSE 8080
 
